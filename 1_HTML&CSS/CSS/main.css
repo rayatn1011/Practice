@@ -695,6 +695,7 @@ p {
 .contact-info a {
   color: #7e7e7e;
   text-decoration: none;
+  word-break: break-all;
 }
 .contact-form {
   display: inline-block;
