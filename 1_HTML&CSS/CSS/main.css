@@ -479,8 +479,10 @@ p {
 }
 .container {
   display: block;
-  width: 1170px;
+  max-width: 1170px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .container.full-width {
   width: 100%;
@@ -700,7 +702,6 @@ p {
 }
 .contact-form .col-6,
 .contact-form .col-12 {
-  padding: 0 15px;
   margin-bottom: 15px;
 }
 .contact-form label {
@@ -892,9 +893,6 @@ p {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-.row {
-  margin: 0 -10px;
-}
 .col-2,
 .col-3,
 .col-4,
@@ -904,7 +902,7 @@ p {
 .col-8,
 .col-12 {
   float: left;
-  padding: 0 30px;
+  padding: 0 15px;
 }
 .col-2 {
   width: 16.66%;
@@ -1064,9 +1062,6 @@ p {
   margin: 0;
   margin-bottom: 30px;
   margin-top: 30px;
-}
-.featured .col-6 {
-  padding: 0 30px;
 }
 .outlets {
   padding-bottom: 100px;
