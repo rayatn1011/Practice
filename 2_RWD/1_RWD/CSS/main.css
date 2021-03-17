@@ -1,4 +1,6 @@
-
+body {
+    margin: 0;
+}
 
 .container {
     margin: auto; 
@@ -55,7 +57,7 @@ a {
 #menu-trigger {
     display: none;
     float: right;
-    width: 30px;
+    width: 40px;
 }
 #menu-trigger p{
     margin: 0;
@@ -82,11 +84,14 @@ a {
     width: 90%; 
     margin: 0 auto;
 }
-
-
-@media (max-width:1000px) {
+@media (max-width:1200px) {
     .container {
-        max-width: 600px;
+        max-width: 1170px;
+    }
+}
+@media (max-width:992px) {
+    .container {
+        max-width: 970px;
     }
     .feature , .sidebar {
         width: 100%;
@@ -94,7 +99,7 @@ a {
 
     }
 }
-@media (max-width:600px) {
+@media (max-width:768px) {
     #menu-trigger {
         display: inline-block;
         z-index: 10;
@@ -126,13 +131,22 @@ a {
         margin-bottom: 30px;
     }
     .container {
-        width: 580px;
+        max-width: 750px;
         text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     #logo {
         float: none;
     }
+    .text {
+        width: 100%;
+    }
 }
-
-
-
+@media (max-width:425px){
+    .container {
+        max-width: 400px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
