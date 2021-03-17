@@ -67,7 +67,7 @@ $(document).ready(function () {
     // scroll img opactiy
     $(document).scroll(function (e) {
         // console.log($(this).scrollTop());
-        if ($(this).scrollTop() > 900) {
+        if ($(this).scrollTop() > 600) {
             $('.fade-img').addClass('in');
         };
     });
