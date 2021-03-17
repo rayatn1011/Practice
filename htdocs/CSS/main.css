@@ -1,0 +1,358 @@
+* {
+    outline: none;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+body {
+    font-family: Roboto, HelveticaNeue, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+br {
+    display: block;
+    padding: 10px 0;
+    content: "";
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 50px 0;
+    height:2px;
+    color:#eee;
+    background-color:#eee;
+    border:none;
+    transition: all 0.2s;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    display: inline-block;
+    max-width: 100%;
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+#header,
+#bottom {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #eee;
+}
+
+#header::before,
+#bottom::before {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+#body {
+    margin-bottom: 100px;
+}
+
+#body>div {
+    display: block;
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+#body>div:first-child {
+    margin-top: 50px;
+}
+.btn,
+.btn:hover{
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    background: #eee;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* practice-hover-btn */
+.practice-hover-btn .btn,
+.practice-hover-btn .btn:hover {
+    display: block;
+    width: 90%;
+    margin: 50px auto 0;
+    font-size: 20px;
+}
+
+
+/* go-to-top */
+#go-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #FFF;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+/* practice-hover-img */
+.block {
+    position: relative;
+}
+
+.info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.info P {
+    position: relative;
+    margin: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+/* practice-fadin-img */
+.fade-img {
+    margin-top: 50px;
+    opacity: 0.1;
+    transition: opacity 0.8s;
+}
+
+.fade-img.in {
+    opacity: 1;
+}
+
+
+/* practice-tab */
+.practice-tab hr {
+    margin: 20px 0 ;
+}
+.tab {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.tab li {
+    display: inline-block;
+    position: relative;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding: 10px;
+    background: #eee;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab li:hover,
+.tab li.active {
+    background: #333;
+    color: #fff;
+}
+
+.tab li.active::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+    border-radius: 4px;
+    padding: 50px 20px;
+    background: #eee;
+    opacity: 0;
+}
+
+/* practice-todo-list */
+#body .practice-todo-list .container-left{
+    width: 320px;
+}
+#todo-list .editing .content,#todo-list li:hover.editing [data-action="delete"]{
+    display: none;
+}
+#todo-list .editing [type="checkbox"] {
+    appearance:none;
+}
+#todo-list .editing [type="text"] {
+    display: inline;
+    border:none
+}
+#todo-list .editing [type="text"] ~ hr {
+    color:#333;
+    background-color:#333;
+}
+#todo-list [type="text"] {
+    display: none;
+}
+#todo-list [data-action="delete"] {
+    display: none;
+}
+#todo-list li:hover [data-action="delete"] {
+    display: inline;
+}
+
+#todo-list li {
+    line-height: 40px;
+    position: relative;
+}
+#todo-list hr{
+    margin: 0;
+    margin-bottom: 10px;
+}
+#todo-list .todo-btn {
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    padding: 2px;
+    right: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+#todo-list .todo-btn:hover {
+    background: #F02849;
+    color: #fff;
+}
+#todo-list [type="checkbox"] {
+    margin-right: 10px;
+}
+.btn-black {
+    margin-top: 10px;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+/* .practice-modal */
+.practice-modal .btn {
+    display: block;
+    width: 90%;
+    margin: 40px auto 0;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1;
+}
+.modal{
+    display: block;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    width: 640px;
+    background: #fff;
+}
+.modal .title {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+.modal hr {
+    margin: 10px 0 20px;
+}
+.modal .content {
+    width:90% ;
+    margin: 0 auto;
+    color: #333;
+}
+
+
+/* practice-lightbox */
+.img-modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    z-index: 1;
+}
+.img-modal{
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 4px;
+    border: 5px solid #fff;
+    margin: 0 auto;
+    width: 960px;
+}
+
+/* practice-api-user */
+.practice-api-user {
+    text-align: center;
+}
+.user-img{
+    display: block;
+    border: 4px solid #eee;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 120px;
+}
+.name{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.email {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #94D7FA;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.email:hover {
+    color: #00A5E6;
+}
