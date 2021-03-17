@@ -1,0 +1,251 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h2{
+    margin: 0;
+    padding: 20px; 
+    text-align: center;
+    background: #c8e6c9;
+}
+h3{
+    border-left: 8px solid #97b498;
+    margin-bottom: 40px;
+    padding: 4px 0 4px 10px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.by{
+    font-size: 16px;
+}
+#body>div:first-child {
+    margin-top: 50px;
+}
+#header {
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    background: #c8e6c9;
+}
+.running {
+    width: 512px;
+    height: 256px;
+    background-image: url("../img/sprites-cat-running.png");
+    animation-name: run;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function:step-start;
+}
+.running.rem{
+    margin-top: 100px;
+    width: 32px;
+    height: 48px;
+    background-image: url("../img/rem.png");
+    transform: scale(2);
+    animation-name: rem;
+    animation-duration: 0.7s;
+}
+.dot {
+    position: fixed;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    z-index: -1;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.dot:hover {
+    animation: scale 4s ease-in-out  normal;
+    animation-name: scale;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+
+}
+.square {    
+    position: fixed;
+    top: 59%;
+    height: 3px;
+    width: 40px;
+    background-color: #C7D8EC;
+    display: inline-block;
+    animation-name: drive;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.xs {
+    height: 15px;
+    width: 15px;
+    transform-origin: 25% 50% ;
+}
+.sm {
+    height: 25px;
+    width: 25px;
+    transform-origin: 30% 50% ;
+}
+.md {
+    height: 40px;
+    width: 40px;
+    transform-origin: 35% 50% ;
+}
+.lg{
+    height: 60px;
+    width: 60px;
+    transform-origin: 40% 50% ;
+}
+.orange {
+    background-color: #ffecb3;
+}
+.yellow{
+    background-color: #fff9c4;
+}
+.green {
+    background-color: #c8e6c9;
+}
+.blue {
+    background-color: #bbdefb;
+}
+.red {
+    background-color: #ffcdd2;
+}
+
+.dot:nth-child(1){
+    top: 47%;
+    left: 20%;
+}
+.dot:nth-child(2){
+    top: 52%;
+    left: 25%;
+}
+.dot:nth-child(3){
+    top: 45%;
+    left: 32%;
+}
+.dot:nth-child(4){
+    top: 50%;
+    left: 47%;
+}
+.dot:nth-child(5){
+    top: 47%;
+    left: 53%;
+}
+.dot:nth-child(6){
+    top: 46%;
+    left: 62%;
+}
+.dot:nth-child(7){
+    top: 49%;
+    left: 68%;
+}
+.dot:nth-child(8){
+    top: 52%;
+    left: 72%;
+}
+.dot:nth-child(9){
+    top: 51%;
+    left: 74%;
+}
+
+.time-xs {
+    animation-duration: 4s;
+}
+.time-sm {
+    animation-duration: 6s;
+}
+.time-md {
+    animation-duration: 8s;
+}
+.time-lg {
+    animation-duration: 10s;
+}
+.reverse{
+    animation-direction: reverse;
+}
+
+
+
+@keyframes run{
+
+    12.5% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 33.33% 0%;
+    }
+    37.5% {
+        background-position: 66.66% 0%;
+    }
+    50% {
+        background-position: 99.99% 0%;
+    }
+    62.5% {
+        background-position: 0% 100%;
+    }
+    75% {
+        background-position: 33.33% 100%;
+    }
+    87.5% {
+        background-position: 66.66% 100%;
+    }
+    100% {
+        background-position: 99.99% 100%;
+    }
+}
+
+@keyframes rem{
+    25%{
+        background-position: 0% 33.33%;
+    }
+    50%{
+        background-position: 33% 33.33%;
+    }
+    75%{
+        background-position: 66% 33.33%;
+    }
+    100%{
+        background-position: 99% 33.33%;
+    }
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes drive{
+    from{
+        left: -10%;
+    }
+    to{
+        left: 150%;
+    }
+}
+@keyframes scale{
+    25%{
+        transform: scale(1.4);
+    }
+    50%{
+        transform: scale(1);
+
+    }
+    75%{
+        transform: scale(1.2);
+
+    }
+}

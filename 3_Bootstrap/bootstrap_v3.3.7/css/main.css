@@ -1,0 +1,286 @@
+/*
+branding-color: #d6b161;
+ */
+
+ * {
+    font-weight: 200;
+}
+
+h1,h2,h3,h4{
+    margin-top: 0;
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+h1,h2 {
+    letter-spacing: 2px;
+}
+
+h3,h4{
+    letter-spacing: 1px;
+}
+
+h3 {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+section {
+     padding: 100px 0;
+}
+
+ul.circle-list {
+    margin-bottom: 30px;
+    padding-left: 18px;
+    list-style-type: circle;
+    line-height: 2;
+}
+
+ul.arror-list {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul.arror-list li {
+    border-bottom: 1px solid #333;
+}
+
+ul.arror-list a{
+    color: #a2a2a2;
+    line-height: 3;
+}
+ul.arror-list a::before {
+    content: ">";
+    padding-right: 15px;
+}
+
+ul.arror-list a:active , ul.arror-list a:hover{
+    text-decoration: none;
+}
+
+p{
+    margin-bottom: 30px;;
+    color: #7e7e7e;
+    line-height: 2;
+}
+
+hr {
+    margin: 0;
+}
+
+.heading-title {
+    margin-bottom: 100px;
+}
+
+.heading-title h2 {
+    margin-bottom: 0;
+    font-size: 24px;
+}
+
+.heading-title p {
+    letter-spacing: 1px;
+}
+
+.btn.btn-default {
+    border: none;
+    padding: 10px 20px;
+    background: #000;
+    color: #FFF;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 12;
+    transition: 0.3s;
+}
+
+.btn.btn-default:hover {
+    background: #d6b161;
+}
+
+.bubble.comment {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.bubble.comment p{
+    margin-bottom: 0;
+}
+
+.bubble.comment .triangle {
+    position: absolute;
+    bottom: -14px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 14px 14px 0 14px;
+    border-color: #f5f5f5 transparent transparent transparent;
+}
+
+.testimonio-meta {
+    margin-top: 15px;
+}
+
+.testimonio-meta .name {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.testimonio-meta .title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #7f7f7f;
+}
+
+ /* #header */
+#header {
+    padding: 0 30px;
+}
+
+nav {
+    line-height: 100px;
+    font-size: 13px;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: transparent;
+    color: #d6b161;
+}
+
+.nav>li>a {
+    padding: 0 15px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
+}
+nav a {
+    color: #333;
+}
+
+/* .header */
+.header {
+    padding: 200px 0;
+    background-image: url(http://massive.markup.themebucket.net/assets/img/about/sb-1.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.breadcrumb {
+    padding: 15px;
+    background: rgba(0,0,0,.7);
+    font-size: 12px;
+}
+
+.breadcrumb>.active {
+    color: #ccc;
+}
+
+.breadcrumb a {
+    color: #7e7e7e;
+}
+
+.breadcrumb a:active , .breadcrumb a:hover {
+    color: #ccc;    
+    text-decoration: none;
+}
+
+/* services */
+.services h3{
+    margin-bottom: 20px;
+}
+
+.services .col-sm-6 {
+    margin-bottom: 80px;
+}
+
+/* other-services */
+.other-services {
+    background-image: url(http://massive.markup.themebucket.net/assets/img/parallax/5.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.other-services h3 {
+    margin-bottom: 20px;
+}
+
+.other-services p {
+    color: #fff;
+}
+
+.other-services hr {
+    display: block;
+    margin: 30px auto;
+    width: 36px;
+    border-top-width: 2px;
+}
+
+/* special-services */
+.special-services .subtitle {
+    color: #d6b161;
+}
+
+/* fotter */
+#footer {
+    background: #222;
+}
+
+#footer > .container {
+    padding: 80px 15px;
+}
+
+#footer h4 {
+    color: #fff;
+    font-size: 14px;
+}
+
+.recent-work li{
+    margin-bottom: 10px;
+}
+
+/* footer.bottom*/
+
+#footer .bottom {
+    border-top: 1px solid #2c2c2c;
+    padding: 35px 0;
+    background: #1b1b1b;
+    color: #6f7273;
+}
+
+#footer .bottom  ul {
+    margin-bottom: 0;
+}
+
+#footer .copyright {
+    line-height: 30px;
+}
+
+.socialmedia a {
+    font-size: 20px;
+    font-weight: 800;
+    color: #5a5a5a;
+}
+
+.socialmedia a:active, .socialmedia a:hover {
+    text-decoration: none;
+}
+
+.socialmedia li {
+    border: 1px solid #5a5a5a;
+    border-radius: 50%;
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
