@@ -1,0 +1,67 @@
+@import "basic.less";
+
+
+.career {
+	#content {
+		.career-page {
+			padding: 100px 0;
+			.career-list {				
+				margin-bottom: 30px;
+				border: 1px solid #eaeaea;
+				padding: 50px 30px;
+				text-align: center;
+				
+				i {
+					font-size: 36px;
+					color: #323232;
+				}
+				.subtitle {
+					margin: 30px 0 20px;
+					color: #333;
+					font-size: 18px;
+					font-weight: normal;
+					letter-spacing: 1px;
+				}
+				p {
+					line-height: 1.5;
+					margin: 0;
+				}
+				a {
+					display: inline-block;
+					margin-top: 30px;
+					color: #cbcbcb;
+					font-size: 12px;
+					text-transform: uppercase;
+					text-decoration: none;
+					transition: all  0.3s;
+					&:after {
+						padding-left: 10px;
+						font-family: "Font Awesome 5 Free";
+						content: "\f30b";
+						font-weight: 900;
+					}
+					&:hover {
+						color: #323232;
+					}
+				}
+			}
+		}
+		.apply-now {
+			padding: 100px 0;
+			.contact-form {
+				label {
+					text-transform: none;
+					color: #323232;
+				}
+				input,select,textarea {
+					margin-bottom: 30px;
+				}
+				.button {
+					text-align: center;
+					display: block;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}
