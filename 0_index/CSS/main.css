@@ -1,18 +1,46 @@
+/* 
+    Main-color: #ca9b52; 
+    Light-color: #ffffb0;
+    Dark-color: #ae8d5b
+
+
+*/
 * {
-    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fefefe;
+    font-family: 'Source Sans Pro', sans-serif;
+    ;
+}
+
+#body {
+    margin-top: 40px;
+}
+
+#body>section {
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    line-height: 1;
 }
 
-hr {
-    margin: 0;
-    height: 2px;
-    color: #eee;
-    background-color: #eee;
-    border: none;
+li {
+    display: inline-block;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -21,72 +49,340 @@ a {
 }
 
 h2,
-h3 {
+h3,
+h4 {
     text-align: center;
     letter-spacing: 4px;
     margin: 0;
+    line-height: 1.5;
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 h3 {
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
-#header {
-    width: 100%;
-    height: 120px;
+h4 {
+    font-size: 1rem;
 }
 
-#header>h2 {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#header .name {
-    font-size: 0.7rem;
-}
-
-.container {
-    display: block;
-    margin: 0 auto;
-    max-width: 960px;
-}
-
-
-/* body */
-.title {
-    margin-top: 40px;
-}
-
-.list li {
-    text-align: center;
-    margin: 2px auto;
-    transition: opacity .2s;
-}
-
-.list li::after {
-    display: block;
-    content: "";
-    max-width: 90%;
-
-    margin: 0 auto;
-    height: 1px;
+hr {
+    height: 2px;
     color: #eee;
     background-color: #eee;
     border: none;
 }
 
-.list li a {
-    display: block;
-    padding: 15px;
-    font-size: 0.8rem;
+p {
+    margin: 0;
     letter-spacing: 2px;
+    line-height: 1.5;
+    color: #555;
 }
 
-.list li:hover {
-    opacity: .5;
+
+.center-vertical {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
+.container {
+    display: block;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 320px;
+}
+
+.clearfiix::after,
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.gray-text {
+    color: #999;
+    font-size: 0.8rem;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.shadow {
+    box-shadow: 0 2px 6px #ddd;
+    border-radius: 7px;
+    transition: box-shadow 0.2s;
+}
+
+.shadow:hover {
+    box-shadow: 0 2px 6px #aaa;
+    border-radius: 7px;
+}
+
+.tag {
+    margin-top: 10px;
+}
+
+.tag li {
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #fff;
+    background: #cbae82;
+    letter-spacing: 2px;
+    transition: background .2s;
+}
+
+.tag li:hover {
+    background: #ae8d5b;
+    cursor: default;
+}
+
+/* float*/
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-4,
+.col-6,
+.col-8,
+.col-12 {
+    float: left;
+    padding: 0 15px;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+/* #header */
+#header {
+    width: 100%;
+    height: 120px;
+    border-bottom: 2px solid #ca9b52;
+    background-image: url("../image/header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.userid {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* #body */
+#body .btn-none,
+#body .btn-none:hover,
+#body .btn-none:active {
+    transform: none;
+    filter: opacity(0.2);
+}
+
+/* section intro */
+#intro .profile {
+    padding: 10px 10px 0;
+}
+
+#intro .profile-img {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#intro .profile-img img {
+    border: 4px solid #eee;
+    border-radius: 50%;
+    width: 100%;
+}
+
+#intro .name {
+    margin-top: 5px;
+}
+
+#intro .name h4 {
+    text-align: left;
+}
+
+#intro>hr {
+    margin: 20px 0;
+}
+
+#intro>p {
+    padding: 20px 0;
+}
+
+.iconfonts {
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    text-align: center;
+}
+
+.iconfonts li {
+    display: inline-block;
+    border-radius: 10px;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    transition: transform 0.2s;
+}
+
+.iconfonts li:hover {
+    border-radius: 10px;
+    transform: scale(1.1);
+}
+
+.iconfonts li:active {
+    transform: scale(1.2);
+}
+
+.iconfonts .github {
+    background: #24292E;
+}
+
+.iconfonts .fb {
+    background: #1876F2;
+}
+
+.iconfonts .ig {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.iconfonts i {
+    font-size: 1.3rem;
+}
+
+.iconfonts a {
+    color: #fff;
+}
+
+
+/* section portfolio */
+
+section .title {
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.thumbnail img {
+    display: block;
+    border-radius: 6px;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+
+.thumbnail {
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    height: 230px;
+}
+
+.thumbnail a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 6px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7));
+    transition: all 0.3s;
+}
+
+.thumbnail a:hover {
+    font-size: 1.1rem;
+}
+
+.thumbnail p {
+    display: block;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #fff;
+}
+
+@media (min-width:426px) {
+    #body>section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .container {
+        width: 85%;
+        max-width: 600px;
+        margin-bottom: 40px;
+    }
+
+    #intro>p {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 30px 9%;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    #intro .profile-img {
+        text-align: right;
+    }
+
+    #intro .profile-img img {
+        max-width: 83px;
+    }
+
+    #intro .name {
+        margin-top: 15px;
+    }
+
+    #intro .profile {
+        padding: 40px 40px 0;
+    }
+
+    .thumbnail {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        width: 80%;
+    }
+
+    .thumbnail img {
+        height: 300px;
+    }
+
+    .thumbnail a {
+        opacity: .8;
+    }
+
+    .thumbnail a:hover {
+        opacity: 1;
+    }
+}
+
+/* @media (min-width:1000px) {
+    
+} */
