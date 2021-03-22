@@ -1,3 +1,5 @@
-$(document).ready(function(){
-    console.log('hi')
+$(document).ready(function () {
+    $('.btn-none').click(function (e) {
+        e.preventDefault();
+    });
 });
