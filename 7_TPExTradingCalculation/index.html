@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台股交易試算器</title>
+    <link rel="icon" href="favicon-32x32.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="fontello/css/fontello.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+<body>
+    <div id="header" class="container">
+        <h2>台股交易試算器</h2>
+        <p>即時試算你的交易損益</p>
+    </div>
+    <div id="body" class="container">
+        <section id="menu" class="gray-bg">
+            <form id="form1" class="row">
+                <div class="tradding-type custom-select">
+                    <label for="tradding-type" class="title">交易類型</label>
+                    <select name="tradding-type" id="tradding-type" required>
+                        <option value="" selected hidden>選擇類型</option>
+                        <option value="normal-trading">一般交易</option>
+                        <option value="day-trading">當沖</option>
+                        <option value="etf-trading">ETF</option>
+                    </select>
+                </div>
+    
+                <div class="tradding-fee">
+                    <label for="fee" class="title">券商手續費</label>
+                    <input type="text" inputmode="decimal" name="fee" id="fee" placeholder="2.8" required >
+                    <span>折</span>
+                </div>
+                <div class="tradding-unit">
+                    <label for="unit" class="title">股數</label>
+                    <input type="text" inputmode="numeric" name="unit" id="unit" placeholder="股數" value="1" required>
+                    <input type="text" value="000" disabled class="input-disable">
+                    <a href=# class="icon-plus"></a>
+                    <a href=# class="icon-minus"></a>
+                    <span>單位(股)</span>
+                </div>
+                <div id="buy-price">
+                    <label for="buy" class="title">買入價格</label>
+                    <input type="text" inputmode="decimal" name="buy" id="buy" placeholder="輸入買價" required>
+                </div>
+                <div id="sell-price">
+                    <label for="sell" class="title">賣出價格</label>
+                    <input type="text" inputmode="decimal" name="sell" id="sell" placeholder="輸入賣價" required>
+                </div>
+                <button class="btn-start">開始計算</button>
+            </form>
+        </section>
+
+        <section id="list">
+            <div  class="row shadow">
+                <div class="income-statement flex">
+                    <div class="net-profitorloss">
+                        <div class="title">淨損益</div>
+                        <span class="content"></span>
+                    </div>
+                    <div class="percent-profitorloss">
+                        <div class="title">損益率</div>
+                        <span class="content"></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="detail">
+                    <div class="detail-buy">買入
+                        <hr>
+                        <div class="amount-buy">金額
+                            <span class="dollar"></span>
+                        </div>
+        
+                        <div class="fee-buy">手續費
+                            <span class="dollar"></span>
+                        </div>
+        
+                        <div class="total-buy">總支出
+                            <span></span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-sell">賣出
+                        <hr>
+                        <div class="amount-sell">金額
+                            <span class="dollar"></span>
+                        </div>
+        
+                        <div class="fee-sell">手續費
+                            <span class="dollar"></span>
+                        </div>
+                        <div class="tax">證交稅
+                            <span class="dollar"></span>
+                        </div>
+                        <div class="total-sell">總收入
+                            <span class="dollar"></span>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <div id="footer" class="container">
+        <p>本網站僅供參考並非投資依據<br>請勿視為買賣基金或其他任何投資之建議<br>Made by rayatn1011</p>
+    </div>
+</body>
+</html>
