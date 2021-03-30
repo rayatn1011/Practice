@@ -178,33 +178,33 @@ $(document).ready(function (e) {
   //浮點數相除 END
 
   // 加入貨幣符號 $("selector").digits();
-  $.fn.digits = function(){ 
-    return this.each(function(){ 
-        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") ); 
+  $.fn.digits = function () {
+    return this.each(function () {
+      $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
     })
-}
+  }
   // 加入貨幣符號 END
 
   // plus & minnus btn
-$(".icon-plus").click(function(e){
-  e.preventDefault;
-  var unitData = parseInt($("#unit").val())+1;
-  if (isNaN(unitData)) {
-    $("#unit").val(1);
-  } else{
-    $("#unit").val(unitData);
-  };
-});
+  $(".icon-plus").click(function (e) {
+    e.preventDefault;
+    var unitData = parseInt($("#unit").val()) + 1;
+    if (isNaN(unitData)) {
+      $("#unit").val(1);
+    } else {
+      $("#unit").val(unitData);
+    };
+  });
 
-$(".icon-minus").click(function(e){
-  e.preventDefault;
-  var unitData = Math.max((parseInt($("#unit").val())-1),1);
-  if (isNaN(unitData)) {
-    $("#unit").val(1);
-  } else{
-    $("#unit").val(unitData);
-  };
-});
+  $(".icon-minus").click(function (e) {
+    e.preventDefault;
+    var unitData = Math.max((parseInt($("#unit").val()) - 1), 1);
+    if (isNaN(unitData)) {
+      $("#unit").val(1);
+    } else {
+      $("#unit").val(unitData);
+    };
+  });
 
 
   // plus & minnus btn END
@@ -221,8 +221,8 @@ $(".icon-minus").click(function(e){
       traddingBuy = formData[3].value,
       traddingSell = formData[4].value;
 
-    if (traddingType=="" || traddingFee=="" || traddingUnit=="" || traddingBuy=="" || traddingSell=="") {
-      if(traddingType==""){
+    if (traddingType == "" || traddingFee == "" || traddingUnit == "" || traddingBuy == "" || traddingSell == "") {
+      if (traddingType == "") {
         $("#form1 .select-selected").addClass("not-select").addClass("not-selected");
         $("#form1 .not-select").bind("animationend", function (e) {
           $("#form1 .select-selected").removeClass("not-select");
@@ -231,7 +231,7 @@ $(".icon-minus").click(function(e){
         $("#form1 .select-selected").removeClass("not-selected");
       };
 
-      if(traddingFee==""){
+      if (traddingFee == "") {
         $("#form1 .tradding-fee input").addClass("not-select").addClass("not-selected");
         $("#form1 .not-select").bind("animationend", function (e) {
           $("#form1 .tradding-fee input").removeClass("not-select");
@@ -241,7 +241,7 @@ $(".icon-minus").click(function(e){
       };
 
 
-      if(traddingUnit==""){
+      if (traddingUnit == "") {
         $("#form1 #unit").addClass("not-select").addClass("not-selected");
         $("#form1 .not-select").bind("animationend", function (e) {
           $("#form1 #unit").removeClass("not-select");
@@ -250,21 +250,21 @@ $(".icon-minus").click(function(e){
         $("#form1 #unit").removeClass("not-selected");
       };
 
-      if(traddingBuy==""){
+      if (traddingBuy == "") {
         $("#form1 #buy-price input").addClass("not-select").addClass("not-selected");
         $("#form1 .not-select").bind("animationend", function (e) {
           $("#form1 #buy-price input").removeClass("not-select");
         });
-      }else {
+      } else {
         $("#form1 #buy-price input").removeClass("not-selected");
       };
 
-      if(traddingSell==""){
+      if (traddingSell == "") {
         $("#form1 #sell-price input").addClass("not-select").addClass("not-selected");
         $("#form1 .not-select").bind("animationend", function (e) {
           $("#form1 #sell-price input").removeClass("not-select");
         });
-      }else {
+      } else {
         $("#form1 #sell-price input").removeClass("not-selected");
       };
 
@@ -273,6 +273,9 @@ $(".icon-minus").click(function(e){
       $("#form1 .select-selected,#form1 input").removeClass("not-selected");
     };
 
+    $("html,body").animate({
+      scrollTop: $('#list .income-statement').offset().top
+    }, 1500);
 
     if (traddingType == "normal-trading") {
       traddingType = 0.003;
@@ -293,34 +296,20 @@ $(".icon-minus").click(function(e){
       totalSell = amountSell - selloutFee - stockTax,
       // profit or loss
       netProfitorloss = totalSell - totalBuy,
-      percentProfitorloss = (Math.round((FloatDiv(netProfitorloss,totalBuy))*1000)/10)+"%" ;
-    // console.log("交易類型:" + traddingType);
-    // console.log("手續費折數:" + traddingFee);
-    // console.log("交易股數:" + traddingUnit);
-    // console.log("買入價:" + traddingBuy);
-    // console.log("賣出價:" + traddingSell);
-    // console.log("買入金額:" + amountBuy);
-    // console.log("買入手續費:" + buyinFee);
-    // console.log("總支出:" + totalBuy);
-    // console.log("賣出金額:" + amountSell);
-    // console.log("賣出手續費:" + selloutFee);
-    // console.log("證交稅:" + stockTax);
-    // console.log("總收入:" + totalSell);
-    // console.log("淨損益:" + netProfitorloss);
-    // console.log("損益率:" + percentProfitorloss);
-    $(".net-profitorloss span").html("$"+netProfitorloss).digits();
-    $(".percent-profitorloss span").html(percentProfitorloss);
+      percentProfitorloss = (Math.round((FloatDiv(netProfitorloss, totalBuy)) * 1000) / 10) + "%";
 
-    $(".amount-buy span").html("$"+amountBuy).digits();
-    $(".fee-buy span").html("$"+buyinFee).digits();
-    $(".total-buy span").html("$"+totalBuy).digits();
+    $(".net-profitorloss span").fadeIn(1500).html("$" + netProfitorloss).digits().css("display", "inline-block");
+    $(".percent-profitorloss span").fadeIn(1500).html(percentProfitorloss).css("display", "inline-block");
 
-    $(".amount-sell span").html("$"+amountSell).digits();
-    $(".fee-sell span").html("$"+selloutFee).digits();
-    $(".tax span").html("$"+stockTax).digits();
-    $(".total-sell span").html("$"+totalSell).digits();
+    $(".amount-buy span").fadeIn(1500).html("$" + amountBuy).digits().css("display", "inline-block");
+    $(".fee-buy span").fadeIn(1500).html("$" + buyinFee).digits().css("display", "inline-block");
+    $(".total-buy span").fadeIn(1500).html("$" + totalBuy).digits().css("display", "inline-block");
 
-    $("html,body").animate({scrollTop:$('#list .income-statement').offset().top},1000);
+    $(".amount-sell span").fadeIn(1500).html("$" + amountSell).digits().css("display", "inline-block");
+    $(".fee-sell span").fadeIn(1500).html("$" + selloutFee).digits().css("display", "inline-block");
+    $(".tax span").fadeIn(1500).html("$" + stockTax).digits().css("display", "inline-block");
+    $(".total-sell span").fadeIn(1500).html("$" + totalSell).digits().css("display", "inline-block");
+
   });
-    // btn-start END
+  // btn-start END
 });
