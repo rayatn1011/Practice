@@ -235,12 +235,14 @@ p {
     width: 40px;
     height: 40px;
     line-height: 40px;
-    transition: transform 0.2s;
+    opacity: .9;
+    transition: transform .2s,opacity .2s;
 }
 
 .iconfonts li:hover {
     border-radius: 10px;
     transform: scale(1.1);
+    opacity: 1;
 }
 
 .iconfonts li:active {
@@ -307,6 +309,7 @@ p {
     object-fit: cover;
     object-position: 50% 0;
     filter: grayscale(100%);
+    transition: filter 0.2s;
 }
 
 
@@ -330,7 +333,7 @@ p {
     filter: none;
 }
 
-.thumbnail p {
+.thumbnail a p{
     display: block;
     position: relative;
     top: 50%;
@@ -339,6 +342,9 @@ p {
     text-align: center;
     letter-spacing: 2px;
     color: #fff;
+}
+#portfolio li>p{
+    margin: 0 20px;
 }
 
 @media (min-width:768px) {
